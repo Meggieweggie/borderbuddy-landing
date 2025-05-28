@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -52,18 +51,70 @@
       border-radius: 10px;
       font-weight: bold;
     }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ec6d22;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.5em;
+      font-family: Arial, sans-serif;
+    }
+    .header .title .border {
+      color: white;
+    }
+    .header .title .buddy {
+      color: #b34700; /* darker orange */
+    }
+  .header .banner {
+      font-size: 1em;
+      font-weight: normal;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 5px 15px;
+      color: #ec6d22;
+    }
+  .who-are-we {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+  }
+  .who-are-we .text-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .who-are-we img {
+    border-radius: 15px;
+    max-width: 200px;
+    height: auto;
+  }
   </style>
 </head>
 <body>
 
+  <header class="header">
+    <div class="title"><span class="border">border</span><span class="buddy">buddy</span></div>
+    <div class="banner">call for a free quota 1-866-926-0448</div>
+  </header>
+
   <h1>IMPORTING AND EXPORTING IS HARD</h1>
   <p>We do the hard part for you.<br>Grab a free online quote now.</p>
+  <p>I want to:</p>
   <button class="button">IMPORT A VEHICLE</button>
   <button class="button">IMPORT ANY ITEM</button>
 
-  <div class="section">
-    <h2>WHO ARE WE</h2>
-    <p>Border Buddy is a customs broker providing online solutions...</p>
+  <div class="section who-are-we">
+    <div class="text-content">
+      <h2>WHO ARE WE</h2>
+      <p>Border Buddy is a customs broker providing online solutions...</p>
+    </div>
+    <img src="/public/car.jpg" alt="Who Are We Image">
   </div>
 
   <div class="section">
@@ -83,8 +134,37 @@
   </div>
 
   <footer>
+    <div class="footer-logo">b</div>
     <p>© 2018 BorderBuddy. All rights reserved.</p>
   </footer>
+
+  <style>
+    .footer-logo {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 2em;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, white 50%, #b34700 50%);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px 0;
+    }
+  </style>
 
 </body>
 </html>
